@@ -25,7 +25,20 @@
           <a class="nav-link" href="#">Services</a>
         </li>
       </ul>
+<!-- home page content -->
 
+<div class="container">
+    {% for news, description, link, i, time, content in content %}
+
+    <div><h3>News</h3>{{news}}</div>
+    <div><h4>Description</h4>{{description}}</div>
+    <div><h2>Link</h2>{{link}}</div>
+    <div><img src="{{i}}" alt=""></div>
+    <div><h5>Time</h5>{{time}}</div>
+    <div><h5>Content</h5>{{content}}</div>
+
+    {% endfor %}
+</div>
 
 
 
