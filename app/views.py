@@ -36,8 +36,9 @@ def index():
 @app.route('/homepage')
 def homepage():
     return render_template('homepage.html')
+    
 # sports route
-@app.route('/')
+@app.route('/sports')
 def sports():
 
     newapi = NewsApiClient(api_key="7497b8a3477240c181b4b85f120d9d24") 
