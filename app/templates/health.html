@@ -15,30 +15,31 @@
 <body>
     <!-- sports content -->
     <h3>Health Updates</h3>
+    <div class="container-fluid">
+        <div class="row">
+            {% for news, description, link, i, time, content in context %}
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card mb-3 bg-info text-white mt-4">
 
+                    <div>
+                        <h6 class="text-center"> Health News</h6>{{news}}
+                    </div>
+                    <p class="card-text text-center" style="color:red">Description</p>{{description}}
 
-    <div class="container">
-        {% for news, description, link, i, time, content in context %}
+                    <p class="card-text text-center" style="color:brown">Link</p>{{link}}
 
-        <div>
-            <h3>News</h3>{{news}}
-        </div>
-        <div>
-            <h4>Description</h4>{{description}}
-        </div>
-        <div>
-            <h2>Link</h2>{{link}}
-        </div>
-        <div><img src="{{i}}" alt=""></div>
-        <div>
-            <h5>Time</h5>{{time}}
-        </div>
-        <div>
-            <h5>Content</h5>{{content}}
-        </div>
+                    <img src="{{i}}" class="card-img image-fluid" alt="">
+                    <p class="card-text"></p>Date Published: {{time}}
+                    <p class="card-text">Content</p>{{content}}
 
-        {% endfor %}
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
     </div>
+
+
 </body>
 
 </html>
