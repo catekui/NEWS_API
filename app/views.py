@@ -65,8 +65,8 @@ def sports():
 
     return render_template('sports.html',context=my_list)
     # health news
-@app.route('/health')
-def health():
+@app.route('/News24')
+def News24():
 
     newapi = NewsApiClient(api_key="7497b8a3477240c181b4b85f120d9d24") 
     topheadlines = newapi.get_top_headlines(sources="News24")
@@ -90,7 +90,7 @@ def health():
 
     my_list = zip( news,description,link,image,time,content)
 
-    return render_template('health.html',context=my_list)
+    return render_template('News24.html',context=my_list)
 # business 
 @app.route('/CNN')
 def CNN():
