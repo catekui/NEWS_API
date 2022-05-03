@@ -33,13 +33,9 @@ def index():
 
     return render_template('index.html',context=my_list)
 
-@app.route('/homepage')
-def homepage():
-    return render_template('homepage.html')
-
 # sports route
-@app.route('/sports')
-def sports():
+@app.route('/ESPN')
+def ESPN():
 
     newapi = NewsApiClient(api_key="7497b8a3477240c181b4b85f120d9d24") 
     topheadlines = newapi.get_top_headlines(sources="ESPN")
@@ -63,8 +59,8 @@ def sports():
 
     my_list = zip( news,description,link,image,time,content)
 
-    return render_template('sports.html',context=my_list)
-    # health news
+    return render_template('ESPN.html',context=my_list)
+    # News 24 news
 @app.route('/News24')
 def News24():
 
@@ -91,7 +87,7 @@ def News24():
     my_list = zip( news,description,link,image,time,content)
 
     return render_template('News24.html',context=my_list)
-# business 
+# CNN 
 @app.route('/CNN')
 def CNN():
 
