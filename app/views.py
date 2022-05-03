@@ -92,8 +92,8 @@ def health():
 
     return render_template('health.html',context=my_list)
 # business 
-@app.route('/business')
-def business():
+@app.route('/CNN')
+def CNN():
 
     newapi = NewsApiClient(api_key="7497b8a3477240c181b4b85f120d9d24") 
     topheadlines = newapi.get_top_headlines(sources="CNN")
@@ -117,11 +117,7 @@ def business():
 
     my_list = zip( news,description,link,image,time,content)
 
-    return render_template('business.html',context=my_list)
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
+    return render_template('CNN.html',context=my_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
