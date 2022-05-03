@@ -19,7 +19,7 @@
 
     <div class="navbar-links">
       <ul class="navbar-nav d-flex flex-row">
-        
+
 
         <li class="nav-item">
           <a class="nav-link" href="#">Home</a>
@@ -50,12 +50,12 @@
             <h6 class="text-center">News</h6>{{news}}
           </div>
           <p class="card-text text-center" style="color:red">Description</p>{{description}}
-          <p class="card-text text-center" style="color:brown">Link</p>{{link}}
-
+          <a href="{{link}}">
+            <p class="card-text text-center" style="color:brown">Link</p>
+          </a>
           <img src="{{i}}" class="card-img image-fluid" alt="">
           <p class="card-text"></p>Date Published: {{time}}
           <p class="card-text">Content</p>{{content}}
-
         </div>
       </div>
 

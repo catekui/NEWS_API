@@ -22,11 +22,13 @@
                 <div class="card mb-3 bg-info text-white mt-2">
 
                     <div>
-                        <h6 class="text-center"> Health News</h6>{{news}}
+                        <h6 class="text-center" style="color:blue">News 24 Updates</h6>{{news}}
                     </div>
                     <p class="card-text text-center" style="color:red">Description</p>{{description}}
 
-                    <p class="card-text text-center" style="color:brown">Link</p>{{link}}
+                    <a href="{{link}}">
+                        <p class="card-text text-center" style="color:brown">Link</p>
+                    </a>
 
                     <img src="{{i}}" class="card-img image-fluid" alt="">
                     <p class="card-text"></p>Date Published: {{time}}
