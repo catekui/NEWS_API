@@ -8,7 +8,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    newapi = NewsApiClient(api_key="7497b8a3477240c181b4b85f120d9d24") 
+    API_KEY = "7497b8a3477240c181b4b85f120d9d24"
+    newapi = NewsApiClient(API_KEY) 
     topheadlines = newapi.get_top_headlines(sources="bbc-news")
     articles = topheadlines['articles']
 
@@ -37,7 +38,8 @@ def index():
 @app.route('/ESPN')
 def ESPN():
 
-    newapi = NewsApiClient(api_key="7497b8a3477240c181b4b85f120d9d24") 
+    API_KEY = "7497b8a3477240c181b4b85f120d9d24"
+    newapi = NewsApiClient(API_KEY) 
     topheadlines = newapi.get_top_headlines(sources="ESPN")
 
     articles = topheadlines['articles']
@@ -64,7 +66,8 @@ def ESPN():
 @app.route('/News24')
 def News24():
 
-    newapi = NewsApiClient(api_key="7497b8a3477240c181b4b85f120d9d24") 
+    API_KEY = "7497b8a3477240c181b4b85f120d9d24"
+    newapi = NewsApiClient(API_KEY) 
     topheadlines = newapi.get_top_headlines(sources="News24")
 
     articles = topheadlines['articles']
@@ -91,7 +94,8 @@ def News24():
 @app.route('/CNN')
 def CNN():
 
-    newapi = NewsApiClient(api_key="7497b8a3477240c181b4b85f120d9d24") 
+    API_KEY = "7497b8a3477240c181b4b85f120d9d24"
+    newapi = NewsApiClient(API_KEY) 
     topheadlines = newapi.get_top_headlines(sources="CNN")
 
     articles = topheadlines['articles']
